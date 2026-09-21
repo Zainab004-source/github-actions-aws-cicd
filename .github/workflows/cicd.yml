@@ -8,9 +8,13 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: github-actions-aws-cicd
+  ECS_CLUSTER: github-actions-aws-cicd-cluster
+  ECS_SERVICE: github-actions-aws-cicd-task-service-qq1559rp
+  ECS_TASK_DEFINITION: task-definition.json
+  CONTAINER_NAME: web
 
 jobs:
-  build-and-push:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     permissions:
@@ -38,3 +42,19 @@ jobs:
         run: |
           docker build -t $REGISTRY/${{ env.ECR_REPOSITORY }}:$IMAGE_TAG .
           docker push $REGISTRY/${{ env.ECR_REPOSITORY }}:$IMAGE_TAG
+
+      - name: Render ECS task definition
+        id: render-task-definition
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: ${{ env.ECS_TASK_DEFINITION }}
+          container-name: ${{ env.CONTAINER_NAME }}
+          image: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
+
+      - name: Deploy to Amazon ECS
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          task-definition: ${{ steps.render-task-definition.outputs.task-definition }}
+          service: ${{ env.ECS_SERVICE }}
+          cluster: ${{ env.ECS_CLUSTER }}
+          wait-for-service-stability: true
