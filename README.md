@@ -74,5 +74,26 @@ The deployment completed successfully and the application was accessible through
  Cloud deployment and troubleshooting
 
  Project Evidence
+ Project Evidence
 
-Screenshots documenting the successful GitHub Actions pipeline, Amazon ECR image, ECS deployment, and running application are available in the project documentation.
+ GitHub Actions — Successful CI/CD Pipeline
+
+![GitHub Actions Success](screenshots/01-github-actions-success.png)
+
+ GitHub Repository
+
+![GitHub Repository](screenshots/02-github-repository.png)
+
+ Amazon ECR — Docker Image
+
+![Amazon ECR](screenshots/03-ecr-docker-image.png)
+
+ Amazon ECS — Successful Deployment
+
+![Amazon ECS Deployment](screenshots/04-ecs-deployment-success.png)
+
+ Live Application
+
+![Live Application](screenshots/05-live-application.png)
+
+
