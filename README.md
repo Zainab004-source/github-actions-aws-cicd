@@ -73,27 +73,26 @@ The deployment completed successfully and the application was accessible through
  AWS networking
  Cloud deployment and troubleshooting
 
- Project Evidence
- Project Evidence
+  Project Evidence
 
  GitHub Actions — Successful CI/CD Pipeline
 
-![GitHub Actions Success](screenshots/01-github-actions-success.png)
+![GitHub Actions Success](screenshots/github-actions-success.png)
 
  GitHub Repository
 
-![GitHub Repository](screenshots/02-github-repository.png)
+![GitHub Repository](screenshots/giithub-repository.png)
 
  Amazon ECR — Docker Image
 
-![Amazon ECR](screenshots/03-ecr-docker-image.png)
+![Amazon ECR](screenshots/ecr-docker-image.png)
 
  Amazon ECS — Successful Deployment
 
-![Amazon ECS Deployment](screenshots/04-ecs-deployment-success.png)
+![Amazon ECS Deployment](screenshots/ecs-deployment-success.png)
 
  Live Application
 
-![Live Application](screenshots/05-live-application.png)
+![Live Application](screenshots/live-application.png)
 
-
+ 
