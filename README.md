@@ -78,21 +78,13 @@ The deployment completed successfully and the application was accessible through
  GitHub Actions — Successful CI/CD Pipeline
 
 ![GitHub Actions Success](screenshots/github-actions-success.png)
+ Project Evidence
 
- GitHub Repository
+The following screenshots document the successful deployment and CI/CD pipeline:
 
-![GitHub Repository](screenshots/giithub-repository.png)
+ [GitHub Actions — Successful CI/CD Pipeline](screenshots/github-actions-success.png)
+ [GitHub Repository](screenshots/giithub-repository.png)
+ [Amazon ECR — Docker Image](screenshots/ecr-docker-image.png)
+ [Amazon ECS — Successful Deployment](screenshots/ecs-deployment-success.png)
+ [Live Application](screenshots/live-application.png)
 
- Amazon ECR — Docker Image
-
-![Amazon ECR](screenshots/ecr-docker-image.png)
-
- Amazon ECS — Successful Deployment
-
-![Amazon ECS Deployment](screenshots/ecs-deployment-success.png)
-
- Live Application
-
-![Live Application](screenshots/live-application.png)
-
- 
